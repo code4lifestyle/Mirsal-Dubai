@@ -124,9 +124,9 @@ function View() {
             ></input>
           </div>
         </div>
-        <div className="row">
-          <div className="col-sm-12">
-            <table className="table">
+        <div className="row mh-25">
+          <div className="col-sm-12 overflow-scroll " style={{maxHeight:"75vh"}}>
+            <table className="table table-bordered">
               <thead>
                 <tr>
                   <th scope="col">VCC No</th>
