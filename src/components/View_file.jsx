@@ -88,23 +88,22 @@ function View_file() {
         <div className="bg-dark text-white p-3 mb-0">
           <h4 className="m-0">View VCC Details</h4>
         </div>
-        <div ref={contentRef} className="border border-black border-1 p-3 p-4 shadow-sm">
-          {console.log("Rendering div with ref")}
-          <h5 className="text-danger mb-4 border-bottom border-1 pb-3">VCC/Vehicle Detail</h5>
-          <div className="row">
-            <div className="col-md-5 small">
+        <div ref={contentRef} className="border border-grey border-1 p-3 p-4 shadow-sm">
+          <h5 className="text-danger border-bottom border-1">VCC/Vehicle Detail</h5>
+          <div className="row d-flex flex-row justify-content-between fs-6" style={{backgroundColor: "#F2F2F2"}}>
+            <div className="col-md-4 small">
               {leftData.map(([label, value], index) => (
-                <div key={index} className="d-flex justify-content-between align-items-start mb-2">
+                <div key={index} className="d-flex justify-content-between align-items-start my-2">
                   <span className="me-2">{label}:</span>
                   <strong className="text-end">{value}</strong>
                 </div>
               ))}
             </div>
-            <div className="col-md-6 offset-md-1 small">
+            <div className="col-md-5 small">
               {rightData.map(([label, value], index) => (
-                <div key={index} className="d-flex justify-content-between align-items-start mb-2">
+                <div key={index} className="d-flex justify-content-between align-items-start my-2 ">
                   <span className="me-2">{label}:</span>
-                  <strong className="text-end">{value}</strong>
+                  <strong className={`text-end ${value === "Printed/Download" ? "text-danger" : ""}`}>{value}</strong>
                 </div>
               ))}
             </div>
