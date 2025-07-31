@@ -43,6 +43,7 @@ function View_file() {
     ["Vehicle Color", record.color || "N/A"],
     ["Declaration Number", record.declarationNo || "N/A"],
     ["Owner Code", record.ownerCode || "N/A"],
+    ["Print Remark", record.printRemark || "N/A"],
   ] : [
     ["VCC No", "N/A"],
     ["VCC Generation date", "N/A"],
@@ -54,9 +55,11 @@ function View_file() {
     ["Vehicle Color", "N/A"],
     ["Declaration Number", "N/A"],
     ["Owner Code", "N/A"],
+    ["Print Remark", "N/A"],
   ];
 
   const rightData = record ? [
+    ["Vcc Status", record.vccStatus || "N/A"],
     ["Chasis No", record.chasisNo || "N/A"],
     ["Year of build", record.buildYear || "N/A"],
     ["Country of origin", record.origin || "N/A"],
@@ -67,6 +70,7 @@ function View_file() {
     ["Declaration Date", record.declarationDate ? new Date(record.declarationDate).toLocaleDateString() : "N/A"],
     ["Owner Name", record.ownerName || "N/A"],
   ] : [
+    ["Vcc Status", "N/A"],
     ["Chasis No", "N/A"],
     ["Year of build", "N/A"],
     ["Country of origin", "N/A"],

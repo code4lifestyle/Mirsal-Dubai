@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import { db } from "../firebase";
+import { db, auth } from "../firebase"; // Import auth
 import { collection, onSnapshot, query, where, getDocs, deleteDoc } from "firebase/firestore";
 
 function View() {
@@ -41,6 +41,13 @@ function View() {
   const DeleteRecord = async (vccNo) => {
     if (window.confirm("Are you sure you want to delete this record?")) {
       try {
+        // Check if user is authenticated
+        if (!auth.currentUser) {
+          console.log("No authenticated user found");
+          alert("Please log in to delete records.");
+          return;
+        }
+        console.log("Attempting to delete record with vccNo:", vccNo); // Debug log
         const q = query(collection(db, "submissions"), where("vccNo", "==", vccNo));
         const querySnapshot = await getDocs(q);
         if (!querySnapshot.empty) {

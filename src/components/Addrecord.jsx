@@ -24,6 +24,8 @@ const formFields = [
   { label: "Declaration Date", name: "declarationDate", type: "date" },
   { label: "Owner Code", name: "ownerCode", type: "text" },
   { label: "Owner Name", name: "ownerName", type: "text" },
+  { label: "Print Remark", name: "printRemark", type: "text" },
+  { label: "Vcc Status", name: "vccStatus", type: "text" },
 ];
 
 const AddRecord = () => {
@@ -48,6 +50,8 @@ const AddRecord = () => {
     declarationDate: "",
     ownerCode: "",
     ownerName: "",
+    vccStatus: "",
+    printRemark: "",
   });
   const [user, setUser] = useState(null);
 
@@ -96,8 +100,10 @@ const AddRecord = () => {
         declarationDate: "",
         ownerCode: "",
         ownerName: "",
-      }); // Reset form
-      navigate(-1); // Navigate back after successful submission
+        vccStatus: "",
+        printRemark: "",
+      });
+      navigate(-1);
     } catch (error) {
       console.error("Error saving record: ", error);
       alert(`Error saving record: ${error.message}`);
