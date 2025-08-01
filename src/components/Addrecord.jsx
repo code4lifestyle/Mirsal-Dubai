@@ -114,12 +114,13 @@ const AddRecord = () => {
     <div className="container mt-5">
       {/* Page Header */}
       <div className="text-center mb-2">
-        <h2 className="text-primary fw-bold">ADD NEW RECORD</h2>
+        <h2 className="fw-bold" style={{ color: '#0D009D' }} >ADD NEW RECORD</h2>
       </div>
 
       <div className="d-flex justify-content-end mb-4">
         <button
-          className="btn btn-primary rounded-pill px-4"
+          className="btn text-white rounded-pill px-4"
+          style={{backgroundColor: '#0D009D' }}
           onClick={() => navigate(-1)}
         >
           Back
@@ -144,7 +145,7 @@ const AddRecord = () => {
           ))}
 
           <div className="col-md-12 mt-3">
-            <button type="submit" className="btn btn-primary rounded-pill px-4">
+            <button type="submit" className="btn mb-4  text-white rounded-pill px-4" style={{backgroundColor: '#0D009D' }}>
               Submit
             </button>
           </div>

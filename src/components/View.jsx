@@ -81,21 +81,21 @@ function View() {
   };
 
   return (
-    <div className="container-fluid">
-      <div className="row">
+    <div className="container-fluid p-5">
+      <div className="row mb-3">
         <div className="col-sm-12 text-center">
-          <h2 className="text-primary pt-2">VCC LIST SITE</h2>
+          <h2 className="pt-2" style={{ color: '#0D009D' }}>VCC LIST SITE</h2>
         </div>
       </div>
       <div className="row">
         <div className="col-sm-2 offset-10">
-          <button className="btn btn-primary" onClick={handleAddNew}>
-            Add new
+          <button className="btn text-white" onClick={handleAddNew} style={{ backgroundColor: '#0D009D', borderColor: '#0D009D' ,}}>
+            + Add new
           </button>
         </div>
       </div>
       <div className="container">
-        <div className="row mt-3">
+        <div className="row mt-3 mb-3">
           <div className="col-sm-3">
             <div className="d-flex align-items-center">
               <span className="me-2">Show</span>
@@ -126,8 +126,8 @@ function View() {
         </div>
         <div className="row mh-25">
           <div className="col-sm-12 overflow-scroll " style={{maxHeight:"75vh"}}>
-            <table className="table table-bordered">
-              <thead>
+            <table className="table table-bordered" >
+              <thead >
                 <tr>
                   <th scope="col">VCC No</th>
                   <th scope="col">Genration date</th>

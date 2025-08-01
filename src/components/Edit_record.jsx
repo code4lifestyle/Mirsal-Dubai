@@ -104,11 +104,11 @@ const Edit_Record = () => {
     <div className="container mt-5">
       {/* Page Header */}
       <div className="text-center mb-2">
-        <h2 className="text-primary fw-bold">EDIT RECORD</h2>
+        <h2 className="fw-bold" style={{color: '#0D009D'}}>EDIT RECORD</h2>
       </div>
 
       <div className="d-flex justify-content-end mb-4">
-        <button className="btn btn-primary rounded-pill px-4" onClick={() => navigate(-1)}>
+        <button className="btn rounded-pill px-4 text-white" style={{backgroundColor: '#0D009D'}} onClick={() => navigate(-1)}>
           Back
         </button>
       </div>
@@ -131,7 +131,7 @@ const Edit_Record = () => {
             </div>
           ))}
           <div className="col-md-12 mt-3">
-            <button type="submit" className="btn btn-primary rounded-pill px-4">
+            <button style={{backgroundColor: '#0D009D'}} type="submit" className="btn text-white mb-4 rounded-pill px-4">
               Submit
             </button>
           </div>

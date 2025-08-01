@@ -92,8 +92,8 @@ function View_file() {
           <div className="">
           <h5 className="text-danger pb-2 border-bottom border-1">VCC/Vehicle Detail</h5>
           </div>
-          <div className="row d-flex flex-row justify-content-between" style={{backgroundColor: "#F2F2F2", fontSize: "14px"}}>
-            <div className="col-md-4 small">
+          <div className="d-none p-3 row d-md-flex flex-row justify-content-between" style={{backgroundColor: "#F2F2F2", fontSize: "14px"}}>
+            <div className="col-md-4 small ">
               {leftData.map(([label, value], index) => (
                 <div key={index} className="d-flex justify-content-between align-items-start my-3">
                   <span className="me-2">{label}:</span>
@@ -101,7 +101,7 @@ function View_file() {
                 </div>
               ))}
             </div>
-            <div className="col-md-5 small">
+            <div className="col-md-4 small">
               {rightData.map(([label, value], index) => (
                 <div key={index} className="d-flex justify-content-between align-items-start my-3 ">
                   <span className="me-2">{label}:</span>
@@ -109,6 +109,20 @@ function View_file() {
                 </div>
               ))}
             </div>
+          </div>
+          
+         <div className="d-md-none p-3" style={{ backgroundColor: "#F2F2F2", fontSize: "14px" }}>
+              {[leftData[0], rightData[0], leftData[1], rightData[1], leftData[2], rightData[2], leftData[3], rightData[3], leftData[4], rightData[4], leftData[5], rightData[5], leftData[6], rightData[6], leftData[7], rightData[7], leftData[8], rightData[8], leftData[9], rightData[9], leftData[10]].map(
+          ([label, value], index) => (
+              <div
+              key={index}
+              className="d-flex justify-content-between align-items-start py-3"
+              >
+                <span className="fw-semibold text-dark">{label}:</span>
+                <strong className={`text-end ${label === "Vcc Status" ? "text-danger" : ""}`}>{value}</strong>
+               </div>
+           )
+           )}
           </div>
         </div>
       </div>
