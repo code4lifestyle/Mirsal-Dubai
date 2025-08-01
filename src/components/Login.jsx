@@ -23,13 +23,13 @@ function Login() {
   return (
     <div className="bg-light min-vh-100 d-flex flex-column">
       {/* Top Navbar */}
-      <nav className="d-flex align-items-center px-4 py-2">
+      <nav className="d-flex bg-white align-items-center px-4 py-4">
         <img
           src={logo}
           alt="Logo"
           style={{ height: '40px' }}
         />
-        <h5 className="ms-2 fw-bold text-primary m-0">VCC List</h5>
+        <h5 className="ms-2 fw-bold  m-0" style={{ color: '#0D009D' }}>VCC List</h5>
       </nav>
 
       {/* Login Card */}
@@ -41,9 +41,9 @@ function Login() {
           <div className="text-center mb-4">
             <div className="d-flex justify-content-center align-items-center">
               <img src={logo} alt="Logo" style={{ height: '40px' }} />
-              <h5 className="ms-2 mt-2 text-primary fw-bold">VCC LIST</h5>
+              <h5 className="ms-2 mt-2  fw-bold" style={{ color: '#0D009D' }}>VCC LIST</h5>
             </div>
-            <h3 className="fw-bold text-primary mt-3">WELCOME BACK</h3>
+            <h3 className="fw-bold  mt-3" style={{ color: '#0D009D' }}>WELCOME BACK</h3>
           </div>
 
           <form onSubmit={handleLogin}>
@@ -73,8 +73,8 @@ function Login() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <div className="d-grid">
-              <button className="btn btn-primary rounded-pill fw-bold" type="submit">
+            <div className="d-flex justify-content-center ">
+              <button className="btn text-white  rounded-pill px-4 py-2 fw-bold" type="submit" style={{ backgroundColor: '#0D009D', borderColor: '#0D009D' ,}}>
                 Login
               </button>
             </div>

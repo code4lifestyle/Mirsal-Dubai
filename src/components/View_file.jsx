@@ -85,15 +85,17 @@ function View_file() {
   return (
     <div className="bg-light">
       <div className="container min-vh-100 p-4">
-        <div className="bg-dark text-white p-3 mb-0">
+        <div className="text-white p-3 mb-0" style={{ backgroundColor: 'rgb(67, 67, 67)' }}>
           <h4 className="m-0">View VCC Details</h4>
         </div>
-        <div ref={contentRef} className="border border-grey border-1 p-3 p-4 shadow-sm">
-          <h5 className="text-danger border-bottom border-1">VCC/Vehicle Detail</h5>
-          <div className="row d-flex flex-row justify-content-between fs-6" style={{backgroundColor: "#F2F2F2"}}>
+        <div ref={contentRef} className="border border-grey border-1 p-3 shadow-sm">
+          <div className="">
+          <h5 className="text-danger pb-2 border-bottom border-1">VCC/Vehicle Detail</h5>
+          </div>
+          <div className="row d-flex flex-row justify-content-between" style={{backgroundColor: "#F2F2F2", fontSize: "14px"}}>
             <div className="col-md-4 small">
               {leftData.map(([label, value], index) => (
-                <div key={index} className="d-flex justify-content-between align-items-start my-2">
+                <div key={index} className="d-flex justify-content-between align-items-start my-3">
                   <span className="me-2">{label}:</span>
                   <strong className="text-end">{value}</strong>
                 </div>
@@ -101,9 +103,9 @@ function View_file() {
             </div>
             <div className="col-md-5 small">
               {rightData.map(([label, value], index) => (
-                <div key={index} className="d-flex justify-content-between align-items-start my-2 ">
+                <div key={index} className="d-flex justify-content-between align-items-start my-3 ">
                   <span className="me-2">{label}:</span>
-                  <strong className={`text-end ${value === "Printed/Download" ? "text-danger" : ""}`}>{value}</strong>
+                  <strong className={`text-end ${label === "Vcc Status" ? "text-danger" : ""}`}>{value}</strong>
                 </div>
               ))}
             </div>

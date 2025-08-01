@@ -150,14 +150,15 @@ function View() {
                     <td>{record.ownerCode}</td>
                     <td>{record.timestamp ? record.timestamp.toDate().toLocaleDateString() : ""}</td>
                     <td>
+                      <div className="d-flex gap-2">
                       <button
-                        className="btn btn-sm btn-primary me-2"
+                        className="btn btn-sm btn-primary"
                         onClick={() => Viewrecord(record.vccNo)}
                       >
                         View
                       </button>
                       <button
-                        className="btn btn-sm btn-warning me-2"
+                        className="btn btn-sm btn-warning"
                         onClick={() => Editrecord(record.vccNo)}
                       >
                         Edit
@@ -168,6 +169,7 @@ function View() {
                       >
                         Delete
                       </button>
+                      </div>
                     </td>
                   </tr>
                 ))}
