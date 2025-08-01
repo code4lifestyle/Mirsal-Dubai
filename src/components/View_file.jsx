@@ -116,9 +116,9 @@ function View_file() {
           ([label, value], index) => (
               <div
               key={index}
-              className="d-flex justify-content-between align-items-start py-3"
+              className="d-flex justify-content-between align-items-start py-2"
               >
-                <span className="fw-semibold text-dark">{label}:</span>
+                <span className="fw-semibold text-dark" style={{fontSize:'13px'}}>{label}:</span>
                 <strong className={`text-end ${label === "Vcc Status" ? "text-danger" : ""}`}>{value}</strong>
                </div>
            )
