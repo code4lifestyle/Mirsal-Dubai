@@ -111,7 +111,7 @@ function View_file() {
             </div>
           </div>
           
-         <div className="d-md-none p-3" style={{ backgroundColor: "#F2F2F2", fontSize: "14px" }}>
+         <div className="d-md-none px-3 pt-3" style={{ backgroundColor: "#F2F2F2", fontSize: "14px" }}>
               {[leftData[0], rightData[0], leftData[1], rightData[1], leftData[2], rightData[2], leftData[3], rightData[3], leftData[4], rightData[4], leftData[5], rightData[5], leftData[6], rightData[6], leftData[7], rightData[7], leftData[8], rightData[8], leftData[9], rightData[9], leftData[10]].map(
           ([label, value], index) => (
               <div
