@@ -84,19 +84,19 @@ function View_file() {
 
   return (
     <div className="bg-light">
-      <div className="container min-vh-100 p-4">
+      <div className="container min-vh-100" id="viewfile">
         <div className="text-white p-3 mb-0" style={{ backgroundColor: 'rgb(67, 67, 67)' }}>
           <h4 className="m-0">View VCC Details</h4>
         </div>
-        <div ref={contentRef} className="border border-grey border-1 p-3 shadow-sm">
+        <div className="border border-grey border-1 px-3 shadow-sm">
           <div className="">
-          <h5 className="text-danger pb-2 border-bottom border-1">VCC/Vehicle Detail</h5>
+          <p className="text-danger pt-2 border-bottom border-1" style={{fontWeight : "700"}}>VCC/Vehicle Detail</p>
           </div>
-          <div className="d-none p-3 row d-md-flex flex-row justify-content-between" style={{backgroundColor: "#F2F2F2", fontSize: "14px"}}>
-            <div className="col-md-4 small ">
+          <div className="d-none row d-md-flex flex-row justify-content-between" style={{backgroundColor: "#F2F2F2", fontSize: "14px"}}>
+            <div className="col-md-4 small">
               {leftData.map(([label, value], index) => (
                 <div key={index} className="d-flex justify-content-between align-items-start my-3">
-                  <span className="me-2">{label}:</span>
+                  <p className="me-2 m-0 p-0">{label}:</p>
                   <strong className="text-end">{value}</strong>
                 </div>
               ))}
@@ -104,7 +104,7 @@ function View_file() {
             <div className="col-md-4 small">
               {rightData.map(([label, value], index) => (
                 <div key={index} className="d-flex justify-content-between align-items-start my-3 ">
-                  <span className="me-2">{label}:</span>
+                  <p className="me-2 p-0 m-0">{label}:</p>
                   <strong className={`text-end ${label === "Vcc Status" ? "text-danger" : ""}`}>{value}</strong>
                 </div>
               ))}
@@ -116,9 +116,9 @@ function View_file() {
           ([label, value], index) => (
               <div
               key={index}
-              className="d-flex justify-content-between align-items-start py-2"
+              className="d-flex justify-content-between align-items-start"
               >
-                <span className="fw-semibold text-dark" style={{fontSize:'13px'}}>{label}:</span>
+                <p className="fw-semibold text-dark" style={{fontSize:'13px'}}>{label}:</p>
                 <strong className={`text-end ${label === "Vcc Status" ? "text-danger" : ""}`}>{value}</strong>
                </div>
            )
