@@ -88,10 +88,11 @@ function View_file() {
         <div className="text-white p-3 mb-0" style={{ backgroundColor: 'rgb(67, 67, 67)' }}>
           <h4 className="m-0">View VCC Details</h4>
         </div>
-        <div className="border border-grey border-1 px-3 shadow-sm">
+        <div className="border border-grey border-1 px-0 px-md-3 shadow-sm">
           <div className="pb-0 mb-0">
-          <p className="text-danger pt-2 border-bottom border-1" style={{fontWeight : "700", marginBottom:'8px'}}>VCC/Vehicle Detail</p>
+          <p className="text-danger pt-2 px-2 px-md-0 border-bottom border-1" style={{fontWeight : "700", marginBottom:'8px'}}>VCC/Vehicle Detail</p>
           </div>
+          {/* descktop-view  */}
           <div className="d-none row d-md-flex flex-row justify-content-between" style={{backgroundColor: "#F2F2F2", fontSize: "14px"}}>
             <div className="col-md-4 small">
               {leftData.map(([label, value], index) => (
@@ -110,19 +111,18 @@ function View_file() {
               ))}
             </div>
           </div>
-          
-         <div className="d-md-none px-3" style={{ backgroundColor: "#F2F2F2", fontSize: "14px" }}>
-              {[leftData[0], rightData[0], leftData[1], rightData[1], leftData[2], rightData[2], leftData[3], rightData[3], leftData[4], rightData[4], leftData[5], rightData[5], leftData[6], rightData[6], leftData[7], rightData[7], leftData[8], rightData[8], leftData[9], rightData[9], leftData[10]].map(
-          ([label, value], index) => (
-              <div
-              key={index}
-              className="d-flex justify-content-between align-items-start"
-              >
-                <p className="fw-semibold text-dark" style={{fontSize:'13px'}}>{label}:</p>
-                <strong className={`text-end ${label === "Vcc Status" ? "text-danger" : ""}`}>{value}</strong>
-               </div>
-           )
-           )}
+          {/* mobile-view  */}
+          <div className="d-md-none px-2" style={{ backgroundColor: "#F2F2F2", fontSize: "14px" }}>
+            {[leftData[0], rightData[0], leftData[1], rightData[1], leftData[2], rightData[2], leftData[3], rightData[3], leftData[4], rightData[4], leftData[5], rightData[5], leftData[6], rightData[6], leftData[7], rightData[7], leftData[8], rightData[8], leftData[9], rightData[9], leftData[10]].map(
+              ([label, value], index) => (
+                <div
+                  key={index}
+                  className="d-flex justify-content-between align-items-start">
+                   <p className="fw-semibold text-dark" style={{fontSize:'13px'}}>{label}:</p>
+                   <strong className={`text-end ${label === "Vcc Status" ? "text-danger" : ""}`}>{value}</strong>
+                </div>
+              )
+               )}
           </div>
         </div>
       </div>
