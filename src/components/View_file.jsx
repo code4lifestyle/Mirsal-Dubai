@@ -83,14 +83,14 @@ function View_file() {
   ];
 
   return (
-    <div className="bg-light">
+    <div className="bg-light" style={{ fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>
       <div className="container min-vh-100" id="viewfile">
         <div className="text-white p-3 mb-0" style={{ backgroundColor: 'rgb(67, 67, 67)' }}>
           <h4 className="m-0">View VCC Details</h4>
         </div>
-        <div className="border border-grey border-1 px-0 px-md-3 shadow-sm">
+        <div className="px-0 px-md-3 shadow-sm" style={{border: "1px solid gray"}}>
           <div className="pb-0 mb-0">
-          <p className="text-danger pt-2 px-2 px-md-0 border-bottom border-1" style={{fontWeight : "700", marginBottom:'8px'}}>VCC/Vehicle Detail</p>
+          <p className="text-danger pt-2 px-2 px-md-0 border-bottom border-1" style={{fontWeight : "700", marginBottom:'3px'}}>VCC/Vehicle Detail</p>
           </div>
           {/* descktop-view  */}
           <div className="d-none row d-md-flex flex-row justify-content-between" style={{backgroundColor: "#F2F2F2", fontSize: "14px"}}>
@@ -117,9 +117,10 @@ function View_file() {
               ([label, value], index) => (
                 <div
                   key={index}
-                  className="d-flex justify-content-between align-items-start">
-                   <p className="text-gray" style={{fontSize:'13px', color:"rgb(27, 27, 27);"}}>{label}:</p>
-                   <strong className={`text-end ${label === "Vcc Status" ? "text-danger" : ""}`}>{value}</strong>
+                  className="container row">
+                   <p className="text-gray col-5 pb-0" style={{fontSize:'13px', color:"rgb(27, 27, 27);", marginBottom: "10px"}}>{label}:</p>
+                   <p className="col-2"></p>
+                   <strong className={`col-5 ${label === "Vcc Status" ? "text-danger" : ""}`} style={{paddingLeft:"0px"}}>{value}</strong>
                 </div>
               )
                )}
