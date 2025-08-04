@@ -66,7 +66,7 @@ function View_file() {
     ["Carriage capacity", record.carriageCapacity || "N/A"],
     ["Vehicle Modal", record.vehicleModal || "N/A"],
     ["Vehicle Type", record.vehicleType || "N/A"],
-    ["Specification Standard", record.specification || "N/A"],
+    ["Specification Standard Name", record.specification || "N/A"],
     ["Declaration Date", record.declarationDate ? new Date(record.declarationDate).toLocaleDateString() : "N/A"],
     ["Owner Name", record.ownerName || "N/A"],
   ] : [
@@ -77,7 +77,7 @@ function View_file() {
     ["Carriage capacity", "N/A"],
     ["Vehicle Modal", "N/A"],
     ["Vehicle Type", "N/A"],
-    ["Specification Standard", "N/A"],
+    ["Specification Standard Name", "N/A"],
     ["Declaration Date", "N/A"],
     ["Owner Name", "N/A"],
   ];
@@ -86,11 +86,11 @@ function View_file() {
     <div className="bg-light" style={{ fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>
       <div className="container min-vh-100" id="viewfile">
         <div className="text-white p-3 mb-0" style={{ backgroundColor: 'rgb(67, 67, 67)' }}>
-          <h4 className="m-0">View VCC Details</h4>
+          <h4 className="m-0 fw-bold fs-5">View VCC Details</h4>
         </div>
         <div className="px-0 px-md-3 shadow-sm" style={{border: "1px solid gray"}}>
           <div className="pb-0 mb-0">
-          <p className="text-danger pt-2 px-2 px-md-0 border-bottom border-1" style={{fontWeight : "700", marginBottom:'3px'}}>VCC/Vehicle Detail</p>
+          <p className="text-danger pt-2 px-2 px-md-0 border-bottom border-1" style={{fontWeight : "700", marginBottom:'3px', paddingBottom: "7px"}}>VCC/Vehicle Detail</p>
           </div>
           {/* descktop-view  */}
           <div className="d-none row d-md-flex flex-row justify-content-between" style={{backgroundColor: "#F2F2F2", fontSize: "14px"}}>
@@ -112,15 +112,15 @@ function View_file() {
             </div>
           </div>
           {/* mobile-view  */}
-          <div className="d-md-none px-2 mx-2" style={{ backgroundColor: "#F2F2F2", fontSize: "14px"}}>
+          <div className="d-md-none px-2 mx-2" style={{ backgroundColor: "#F2F2F2", fontSize: "13px"}}>
             {[leftData[0], rightData[0], leftData[1], rightData[1], leftData[2], rightData[2], leftData[3], rightData[3], leftData[4], rightData[4], leftData[5], rightData[5], leftData[6], rightData[6], leftData[7], rightData[7], leftData[8], rightData[8], leftData[9], rightData[9], leftData[10]].map(
               ([label, value], index) => (
                 <div
                   key={index}
-                  className="container row">
-                   <p className="text-gray col-5 pb-0" style={{fontSize:'13px', color:"rgb(27, 27, 27);", marginBottom: "10px"}}>{label}:</p>
-                   <p className="col-2"></p>
-                   <strong className={`col-5 ${label === "Vcc Status" ? "text-danger" : ""}`} style={{paddingLeft:"0px"}}>{value}</strong>
+                  className="container row"
+                  style={{ paddingBottom: "5px", marginRight: 0, marginLeft: 0, paddingTop: "5px", }}>
+                   <p className=" col-6" style={{ color: "#1b1b1b", fontSize: "13px", marginBottom: 0, paddingLeft: "0px"}}>{label}:</p>
+                   <strong className="col-6" style={{ color: label === "Vcc Status" ? "#DC3545" : "#000", paddingLeft: "16px", fontWeight: "bold", fontSize: "13px", wordBreak: "break-word", paddingRight : "0!important"}}>{value}</strong>
                 </div>
               )
                )}
