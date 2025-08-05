@@ -98,15 +98,15 @@ function View_file() {
               {leftData.map(([label, value], index) => (
                 <div key={index} className="d-flex justify-content-between align-items-start my-3">
                   <p className="me-2 m-0 p-0">{label}:</p>
-                  <strong className="text-end">{value}</strong>
+                  <strong className="text-start text-black" >{value}</strong>
                 </div>
               ))}
             </div>
-            <div className="col-md-4 small">
+            <div className="col-md-5 small">
               {rightData.map(([label, value], index) => (
                 <div key={index} className="d-flex justify-content-between align-items-start my-3 ">
                   <p className="me-2 p-0 m-0">{label}:</p>
-                  <strong className={`text-end ${label === "Vcc Status" ? "text-danger" : ""}`}>{value}</strong>
+                  <strong className={`${label === "Vcc Status" ? "text-danger" : "text-black"}`} style={{textAlign: "left",}}>{value}</strong>
                 </div>
               ))}
             </div>
