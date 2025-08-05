@@ -111,21 +111,37 @@ function View_file() {
               ))}
             </div>
           </div>
+
           {/* mobile-view  */}
-          <div className="d-md-none px-2 mx-2" style={{ backgroundColor: "#F2F2F2", fontSize: "13px"}}>
+          <div className="d-md-none px-1 mx-2" style={{ backgroundColor: "#F2F2F2", fontSize: "13px",}}>
             {[leftData[0], rightData[0], leftData[1], rightData[1], leftData[2], rightData[2], leftData[3], rightData[3], leftData[4], rightData[4], leftData[5], rightData[5], leftData[6], rightData[6], leftData[7], rightData[7], leftData[8], rightData[8], leftData[9], rightData[9], leftData[10]].map(
               ([label, value], index) => (
                 <div
                   key={index}
                   className="container row"
-                  style={{ paddingBottom: "5px", marginRight: 0, marginLeft: 0, paddingTop: "5px", }}>
-                   <p className=" col-6" style={{ color: "#1b1b1b", fontSize: "13px", marginBottom: 0, paddingLeft: "0px"}}>{label}:</p>
-                   <strong className="col-6" style={{ color: label === "Vcc Status" ? "#DC3545" : "#000", paddingLeft: "16px", fontWeight: "bold", fontSize: "13px", wordBreak: "break-word", paddingRight : "0!important"}}>{value}</strong>
-                </div>
-              )
-               )}
+                  style={{ paddingBottom: "7px",paddingTop: "7px", marginRight: 0, marginLeft: 0, }}> 
+                   <p className="col-6" style={{ color: "#1b1b1b", fontSize: "13px", marginBottom: 0, paddingLeft: "0px"}}>{label}:</p>
+                   <strong className="col-6 text-start"
+                           style={{
+                                color: label === "Vcc Status" ? "#DC3545" : "#000",
+                                fontWeight: "bold",
+                                fontSize: "13px",
+                                wordBreak: "break-word",
+                                paddingRight: "0",
+                                display: "block",
+                                whiteSpace: "normal",
+                                lineHeight: "16px",
+                                maxWidth: "100%",
+                                paddingLeft: label === "Owner Name" ? "0px" : "12px",
+                                marginTop: label === "Owner Name" ? "0px" : "0",
+                                textAlign: "left"
+                              }}>
+                                {value}
+                    </strong>
+                  </div>
+                ))}
           </div>
-        </div>
+       </div>
       </div>
     </div>
   );
