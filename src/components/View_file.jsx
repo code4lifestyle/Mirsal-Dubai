@@ -97,8 +97,8 @@ function View_file() {
             <div className="col-md-4 small">
               {leftData.map(([label, value], index) => (
                 <div key={index} className="d-flex justify-content-between align-items-start my-3">
-                  <p className="me-2 m-0 p-0">{label}:</p>
-                  <strong className="text-start text-black" >{value}</strong>
+                  <div><p className="me-2 m-0 p-0">{label}:</p></div>
+                  <div><strong className="text-start text-black" >{value}</strong></div>
                 </div>
               ))}
             </div>
