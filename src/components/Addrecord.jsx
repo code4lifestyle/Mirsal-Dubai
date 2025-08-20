@@ -139,7 +139,6 @@ const AddRecord = () => {
                 className="form-control"
                 value={formData[field.name]}
                 onChange={handleChange}
-                required
               />
             </div>
           ))}

@@ -126,7 +126,6 @@ const Edit_Record = () => {
                 className="form-control"
                 value={formData[field.name] || ""}
                 onChange={handleChange}
-                required
               />
             </div>
           ))}
