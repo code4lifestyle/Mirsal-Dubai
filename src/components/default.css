@@ -25,7 +25,7 @@ html {
 
 
 body {
-    background-color: var(--panel-color);
+    background-color: white;
     overflow-x: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
